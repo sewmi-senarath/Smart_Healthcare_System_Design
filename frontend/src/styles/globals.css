@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --font-size: 16px;
+  
+  /* Healthcare Brand Colors */
+  --hc-primary: #2C7BE5;
+  --hc-secondary: #27AE60;
+  --hc-accent: #F2994A;
+  --hc-neutral-900: #0B1B2B;
+  --hc-neutral-600: #6B7A90;
+  --hc-neutral-200: #E9EEF5;
+  --hc-neutral-100: #F8F9FB;
+  
+  /* Spacing Tokens */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  
+  /* Radii Tokens */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  /* Elevation Tokens */
+  --shadow-none: 0 0 0 0 rgba(0, 0, 0, 0);
+  --shadow-sm: 0 2px 4px 0 rgba(11, 27, 43, 0.08);
+  --shadow-md: 0 4px 8px 0 rgba(11, 27, 43, 0.12);
+  --shadow-lg: 0 8px 16px 0 rgba(11, 27, 43, 0.16);
+  
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #0B1B2B;
+  --card: #ffffff;
+  --card-foreground: #0B1B2B;
+  --popover: #ffffff;
+  --popover-foreground: #0B1B2B;
+  --primary: #2C7BE5;
+  --primary-foreground: #ffffff;
+  --secondary: #27AE60;
+  --secondary-foreground: #ffffff;
+  --muted: #E9EEF5;
+  --muted-foreground: #6B7A90;
+  --accent: #F2994A;
+  --accent-foreground: #ffffff;
+  --destructive: #E74C3C;
+  --destructive-foreground: #ffffff;
+  --border: #E9EEF5;
+  --input: #E9EEF5;
+  --input-background: #F8F9FB;
+  --switch-background: #E9EEF5;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #2C7BE5;
+  
+  /* Chart Colors */
+  --chart-1: #2C7BE5;
+  --chart-2: #27AE60;
+  --chart-3: #F2994A;
+  --chart-4: #9B59B6;
+  --chart-5: #E74C3C;
+  
+  --radius: 0.75rem;
+  --sidebar: #F8F9FB;
+  --sidebar-foreground: #0B1B2B;
+  --sidebar-primary: #2C7BE5;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #E9EEF5;
+  --sidebar-accent-foreground: #0B1B2B;
+  --sidebar-border: #E9EEF5;
+  --sidebar-ring: #2C7BE5;
+}
+
+.dark {
+  /* Healthcare Brand Colors - Dark Mode */
+  --hc-primary: #4A90E2;
+  --hc-secondary: #2ECC71;
+  --hc-accent: #F39C12;
+  --hc-neutral-900: #E9EEF5;
+  --hc-neutral-600: #9CA8BA;
+  --hc-neutral-200: #1E2A3A;
+  --hc-neutral-100: #151F2E;
+  
+  /* Base Colors - Dark Mode */
+  --background: #0B1B2B;
+  --foreground: #E9EEF5;
+  --card: #151F2E;
+  --card-foreground: #E9EEF5;
+  --popover: #151F2E;
+  --popover-foreground: #E9EEF5;
+  --primary: #4A90E2;
+  --primary-foreground: #ffffff;
+  --secondary: #2ECC71;
+  --secondary-foreground: #ffffff;
+  --muted: #1E2A3A;
+  --muted-foreground: #9CA8BA;
+  --accent: #F39C12;
+  --accent-foreground: #ffffff;
+  --destructive: #E74C3C;
+  --destructive-foreground: #ffffff;
+  --border: #1E2A3A;
+  --input: #1E2A3A;
+  --input-background: #151F2E;
+  --ring: #4A90E2;
+  
+  /* Chart Colors - Dark Mode */
+  --chart-1: #4A90E2;
+  --chart-2: #2ECC71;
+  --chart-3: #F39C12;
+  --chart-4: #9B59B6;
+  --chart-5: #E74C3C;
+  
+  --sidebar: #151F2E;
+  --sidebar-foreground: #E9EEF5;
+  --sidebar-primary: #4A90E2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1E2A3A;
+  --sidebar-accent-foreground: #E9EEF5;
+  --sidebar-border: #1E2A3A;
+  --sidebar-ring: #4A90E2;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+} */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Safe, valid focus ring */
+  *:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--ring, #2C7BE5);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, button, label {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
