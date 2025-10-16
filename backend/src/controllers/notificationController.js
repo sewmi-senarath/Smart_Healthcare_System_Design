@@ -47,26 +47,7 @@ export const getNotifications = asyncHandler(async (req, res) => {
 // @desc    Mark notification as read
 // @route   PATCH /api/v1/notifications/:id/read
 // @access  Private
-export const markAsRead = asyncHandler(async (req, res) => {
-  const notification = await Notification.findOne({
-    _id: req.params.id,
-    userId: req.user.id
-  });
 
-  if (!notification) {
-    throw new AppError('Notification not found', 404);
-  }
-
-  notification.isRead = true;
-  notification.readAt = new Date();
-  await notification.save();
-
-  res.json({
-    success: true,
-    message: 'Notification marked as read',
-    data: notification
-  });
-});
 
 // @desc    Mark all notifications as read
 // @route   PATCH /api/v1/notifications/read-all
